@@ -1,4 +1,15 @@
 .svgAnimation {
+  margin-top: 20px;
   text-align: center; }
+
+.path {
+  stroke-dasharray: 2910;
+  stroke-dashoffset: 2910;
+  animation-fill-mode: forwards;
+  animation: dash 5s linear; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
 
 /*# sourceMappingURL=style.css.map */
