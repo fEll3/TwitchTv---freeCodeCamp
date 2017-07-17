@@ -1,15 +1,58 @@
 .svgAnimation {
   margin-top: 20px;
   text-align: center; }
+  .svgAnimation .twitchSvg {
+    width: 75%;
+    height: 75%; }
+  .svgAnimation .path {
+    stroke-dasharray: 2910;
+    animation: twitch 3s linear forwards;
+    transform-origin: 50% 10%; }
 
-.path {
-  stroke-dasharray: 2910;
-  stroke-dashoffset: 2910;
-  animation-fill-mode: forwards;
-  animation: dash 5s linear; }
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }
+@keyframes twitch {
+  0% {
+    stroke-dashoffset: -2910; }
+  95% {
+    fill: #fff; }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #6441a5;
+    transform: scale(0.6, 0.6); } }
+.twitchTv {
+  text-align: center;
+  margin-top: -7%; }
+  .twitchTv .button {
+    width: 200px;
+    border: none;
+    color: #fff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer; }
+  .twitchTv .all {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #4caf50; }
+    .twitchTv .all:hover {
+      background-color: #4caf50;
+      color: #fff; }
+  .twitchTv .online {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #008cba; }
+    .twitchTv .online:hover {
+      background-color: #008cba;
+      color: #fff; }
+  .twitchTv .offline {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #f44336; }
+    .twitchTv .offline:hover {
+      background-color: #f44336;
+      color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

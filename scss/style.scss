@@ -4,20 +4,74 @@
 @import "_variables";
 @import "_mixins";
 
+// Twitch Animation
 .svgAnimation{
   margin-top: 20px;
   text-align: center;
+  .twitchSvg{
+    width: 75%;
+    height: 75%;
+  }
+  .path{
+    stroke-dasharray: 2910;
+    animation: twitch 3s linear forwards;
+    transform-origin: 50% 10%;
+  }
 }
 
-.path{
-  stroke-dasharray: 2910;
-  stroke-dashoffset: 2910;
-  animation-fill-mode: forwards;
-  animation: dash 5s linear;
-}
-
-@keyframes dash{
-  to{
+@keyframes twitch{
+  0%{
+    stroke-dashoffset: -2910;
+  }
+  95%{
+    fill: #fff;
+  }
+  100%{
     stroke-dashoffset: 0;
+    fill: $twitchPurple;
+    transform: scale(0.6, 0.6);
+  }
+}
+
+//Twitch Tv - Buttons
+.twitchTv{
+  text-align: center;
+  margin-top: -7%;
+  .button{
+    width: 200px;
+    border: none;
+    color: $white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .all{
+    @include button;
+    border: 2px solid $allGreen;
+    &:hover{
+      background-color: $allGreen;
+      color: $white;
+    }
+  }
+  .online{
+    @include button;
+    border: 2px solid $onlineBlue;
+    &:hover{
+      background-color: $onlineBlue;
+      color: $white;
+    }
+  }
+  .offline{
+    @include button;
+    border: 2px solid $offlineRed;
+    &:hover{
+      background-color: $offlineRed;
+      color: $white;
+    }
   }
 }
