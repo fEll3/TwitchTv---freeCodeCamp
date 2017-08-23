@@ -18,3 +18,24 @@
   background-color: $white;
   color: $black;
 }
+
+// clearfix
+@mixin clearfix{
+  &:after{ // Pseudo classes - clearfix
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// grid
+@mixin grid($cols, $mgn){ //$cols = colums $mgn = margin
+  float: left;
+  margin-top: $mgn;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols);
+  &:nth-child(#{$cols}n){ // #{$cols}n = last colum in the row
+    margin-right: 0;
+  }
+}

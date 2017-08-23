@@ -1,9 +1,17 @@
+body {
+  background-image: url("http://s1.picswalls.com/wallpapers/2014/06/22/starcraft-wide-wallpaper_10591681_46.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover; }
+
 .svgAnimation {
-  margin-top: 20px;
   text-align: center; }
   .svgAnimation .twitchSvg {
+    margin-top: 20px;
     width: 75%;
-    height: 75%; }
+    height: 75%;
+    padding-bottom: 10px; }
   .svgAnimation .path {
     stroke-dasharray: 2910;
     animation: twitch 3s linear forwards;
@@ -11,17 +19,20 @@
 
 @keyframes twitch {
   0% {
-    stroke-dashoffset: -2910; }
+    stroke-dashoffset: -2910;
+    transform: scale();
+    fill: none; }
   95% {
-    fill: #fff; }
+    fill: none; }
   100% {
     stroke-dashoffset: 0;
-    fill: #6441a5;
-    transform: scale(0.6, 0.6); } }
-.twitchTv {
+    fill: #000; } }
+.nav-list {
   text-align: center;
-  margin-top: -7%; }
-  .twitchTv .button {
+  padding-top: 10px; }
+  .nav-list .item {
+    display: inline; }
+  .nav-list .button {
     width: 200px;
     border: none;
     color: #fff;
@@ -33,29 +44,57 @@
     margin: 4px 2px;
     transition-duration: 0.5s;
     cursor: pointer; }
-  .twitchTv .all {
+  .nav-list .all {
     background-color: #fff;
     color: #000;
     border: 2px solid #4caf50; }
-    .twitchTv .all:hover {
+    .nav-list .all:hover {
       background-color: #4caf50;
       color: #fff; }
-  .twitchTv .online {
+  .nav-list .online {
     background-color: #fff;
     color: #000;
     border: 2px solid #008cba; }
-    .twitchTv .online:hover {
+    .nav-list .online:hover {
       background-color: #008cba;
       color: #fff; }
-  .twitchTv .offline {
+  .nav-list .offline {
     background-color: #fff;
     color: #000;
     border: 2px solid #f44336; }
-    .twitchTv .offline:hover {
+    .nav-list .offline:hover {
       background-color: #f44336;
       color: #fff; }
 
 .list {
   text-align: center; }
+  .list .dataList {
+    margin: auto;
+    max-width: 80%;
+    border: 3px #fff solid;
+    border-radius: 50px;
+    margin-bottom: 10px; }
+    .list .dataList:after {
+      content: "";
+      display: block;
+      clear: both; }
+  .list .block {
+    display: inline-block;
+    float: left;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    width: 32%; }
+    .list .block:nth-child(3n) {
+      margin-right: 0; }
+  .list .align {
+    font-size: 1.5em; }
+  .list .name, .list .dataStatus, .list .status {
+    color: #fff; }
+  .list img {
+    border: 1px #fff solid;
+    border-radius: 30px;
+    max-height: 50%;
+    max-width: 50%; }
 
 /*# sourceMappingURL=style.css.map */

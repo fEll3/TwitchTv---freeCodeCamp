@@ -4,13 +4,23 @@
 @import "_variables";
 @import "_mixins";
 
+//Twich backgroumd
+body{
+  background-image: url("http://s1.picswalls.com/wallpapers/2014/06/22/starcraft-wide-wallpaper_10591681_46.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 // Twitch Animation
 .svgAnimation{
-  margin-top: 20px;
   text-align: center;
   .twitchSvg{
+    margin-top: 20px;
     width: 75%;
     height: 75%;
+    padding-bottom: 10px;
   }
   .path{
     stroke-dasharray: 2910;
@@ -22,21 +32,26 @@
 @keyframes twitch{
   0%{
     stroke-dashoffset: -2910;
+    transform: scale();
+    fill: none;
   }
   95%{
-    fill: #fff;
+    fill: none;
   }
   100%{
     stroke-dashoffset: 0;
-    fill: $twitchPurple;
-    transform: scale(0.6, 0.6);
+    fill: $black;
+
   }
 }
 
 //Twitch Tv - Buttons
-.twitchTv{
+.nav-list{
   text-align: center;
-  margin-top: -7%;
+  padding-top: 10px;
+  .item{
+    display: inline;
+  }
   .button{
     width: 200px;
     border: none;
@@ -80,4 +95,28 @@
 
 .list{
   text-align: center;
+  .dataList{
+    margin: auto;
+    max-width: 80%;
+    border: 3px $white solid;
+    border-radius: 50px;
+    @include clearfix;
+    margin-bottom: 10px;
+  }
+  .block{
+    display: inline-block;
+    @include grid(3,2%);
+  }
+  .align{
+    font-size: 1.5em;
+  }
+  .name, .dataStatus, .status{
+    color: $white;
+  }
+  img{
+    border: 1px $white solid;
+    border-radius: 30px;
+    max-height: 50%;
+    max-width: 50%;
+  }
 }
