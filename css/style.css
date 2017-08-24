@@ -14,7 +14,7 @@ body {
     padding-bottom: 10px; }
   .svgAnimation .path {
     stroke-dasharray: 2910;
-    animation: twitch 3s linear forwards;
+    animation: twitch 1.5s linear forwards;
     transform-origin: 50% 10%; }
 
 @keyframes twitch {
@@ -32,10 +32,14 @@ body {
   padding-top: 10px; }
   .nav-list .item {
     display: inline; }
-  .nav-list .button {
-    width: 200px;
-    border: none;
+  .nav-list .all {
+    background-color: Transparent;
     color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    outline-color: Transparent;
+    width: 200px;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -44,25 +48,48 @@ body {
     margin: 4px 2px;
     transition-duration: 0.5s;
     cursor: pointer; }
-  .nav-list .all {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #4caf50; }
     .nav-list .all:hover {
+      border: 2px solid #4caf50;
       background-color: #4caf50;
       color: #fff; }
   .nav-list .online {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #008cba; }
+    background-color: Transparent;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    outline-color: Transparent;
+    width: 200px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer; }
     .nav-list .online:hover {
+      border: 2px solid #008cba;
       background-color: #008cba;
       color: #fff; }
   .nav-list .offline {
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #f44336; }
+    background-color: Transparent;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    outline-color: Transparent;
+    width: 200px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer; }
     .nav-list .offline:hover {
+      border: 2px solid #f44336;
       background-color: #f44336;
       color: #fff; }
 
@@ -87,8 +114,10 @@ body {
     width: 32%; }
     .list .block:nth-child(3n) {
       margin-right: 0; }
-  .list .align {
+  .list .alignName, .list .alignStatus {
     font-size: 1.5em; }
+  .list .alignStatus {
+    padding-top: 4%; }
   .list .name, .list .dataStatus, .list .status {
     color: #fff; }
   .list img {

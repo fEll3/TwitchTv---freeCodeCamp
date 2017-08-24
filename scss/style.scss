@@ -24,7 +24,7 @@ body{
   }
   .path{
     stroke-dasharray: 2910;
-    animation: twitch 3s linear forwards;
+    animation: twitch 1.5s linear forwards;
     transform-origin: 50% 10%;
   }
 }
@@ -52,39 +52,27 @@ body{
   .item{
     display: inline;
   }
-  .button{
-    width: 200px;
-    border: none;
-    color: $white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.5s;
-    cursor: pointer;
-  }
+
   .all{
     @include button;
-    border: 2px solid $allGreen;
     &:hover{
+      border: 2px solid $allGreen;
       background-color: $allGreen;
       color: $white;
     }
   }
   .online{
     @include button;
-    border: 2px solid $onlineBlue;
     &:hover{
+      border: 2px solid $onlineBlue;
       background-color: $onlineBlue;
       color: $white;
     }
   }
   .offline{
     @include button;
-    border: 2px solid $offlineRed;
     &:hover{
+      border: 2px solid $offlineRed;
       background-color: $offlineRed;
       color: $white;
     }
@@ -92,7 +80,6 @@ body{
 }
 
 // List Div
-
 .list{
   text-align: center;
   .dataList{
@@ -107,8 +94,11 @@ body{
     display: inline-block;
     @include grid(3,2%);
   }
-  .align{
+  .alignName, .alignStatus{
     font-size: 1.5em;
+  }
+  .alignStatus{
+    padding-top: 4%;
   }
   .name, .dataStatus, .status{
     color: $white;

@@ -13,10 +13,27 @@
   }
 }
 
-// Buttons basic colors
+// Buttons basic
 @mixin button{
-  background-color: $white;
-  color: $black;
+  background-color: Transparent;
+  color: $white;
+  font-weight: bold;
+  border: 2px solid $white;
+  border-radius: 50px;
+  outline-color: Transparent;
+  width: 200px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+@mixin border{
+  border-radius: 50px;
 }
 
 // clearfix
@@ -29,7 +46,7 @@
 }
 
 // grid
-@mixin grid($cols, $mgn){ //$cols = colums $mgn = margin
+@mixin grid($cols, $mgn){ //$cols = nuber of colums $mgn = margin %
   float: left;
   margin-top: $mgn;
   margin-right: $mgn;
