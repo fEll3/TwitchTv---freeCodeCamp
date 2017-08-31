@@ -7,7 +7,7 @@ $(function(){
   var $list = $(".list");
   var userNames = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "ThijsHS",
   "habathcx", "RobotCaleb", "noobs2ninjas", "Savjz", "BlackFlrelce", "EULCS1", "brunofin",
-  "OverwatchContenders", "QuakeChampions", "wudijo", "bmkibler"];
+  "OverwatchContenders", "QuakeChampions", "wudijo", "bmkibler", "PlayHearthstone"];
   var urlStreams =  'https://wind-bow.gomix.me/twitch-api/streams/';
   var urlChannel = "https://wind-bow.gomix.me/twitch-api/channels/";
   var noLogo = "http://en.qrcode-pro.com/generator/no_logo.png?1=1";
@@ -94,6 +94,6 @@ $(function(){
 
   setTimeout(twichData, 1500);
   toogle();
-  setInterval(changeBackGround, 10000);
+  setInterval(changeBackGround, 30000);
 
 });

@@ -17,6 +17,7 @@
 @mixin button{
   background-color: Transparent;
   color: $white;
+  font-style: $rajdhani;
   font-weight: bold;
   border: 2px solid $white;
   border-radius: 50px;
@@ -30,8 +31,20 @@
   margin: 4px 2px;
   transition-duration: 0.5s;
   cursor: pointer;
+  // Media Queries
+  @include mQ(700px){
+    width: 150px;
+    padding: 16px 24px;
+    font-size: 12px;
+    margin: 4px 2px;
+  }
+  @include mQ(530px){
+    width: 100px;
+    padding: 8px 16px;
+  }
 }
 
+// List div border radius
 @mixin border{
   border-radius: 50px;
 }

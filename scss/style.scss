@@ -6,7 +6,8 @@
 
 //Twich backgroumd
 body{
-  background-image: url("http://s1.picswalls.com/wallpapers/2014/06/22/starcraft-wide-wallpaper_10591681_46.jpg");
+  background-image: url("./jpg/starcraftTwitchTv.jpg"),
+                    url("http://s1.picswalls.com/wallpapers/2014/06/22/starcraft-wide-wallpaper_10591681_46.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -89,16 +90,38 @@ body{
     border-radius: 50px;
     @include clearfix;
     margin-bottom: 10px;
+    @include mQ(800px){
+      border: none;
+      border-bottom: 3px $white solid;
+      border-top: 3px $white solid;
+    }
   }
   .block{
-    display: inline-block;
     @include grid(3,2%);
+    @include mQ(800px){
+      @include grid(1,2%);
+    }
   }
   .alignName, .alignStatus{
     font-size: 1.5em;
+    @include mQ(1375px){
+      font-size: 1.3em;
+    }
   }
   .alignStatus{
     padding-top: 4%;
+    @include mQ(800px){
+      padding-top: 0px;
+    }
+  }
+  .name{
+    font-family: $fondamento;
+  }
+  .dataStatus{
+    font-family: $rajdhani;
+  }
+  .status{
+    font-family: $rockSalt;
   }
   .name, .dataStatus, .status{
     color: $white;
@@ -108,5 +131,9 @@ body{
     border-radius: 30px;
     max-height: 50%;
     max-width: 50%;
+    @include mQ(1375px){
+      max-height: 80%;
+      max-width: 80%;
+    }
   }
 }
